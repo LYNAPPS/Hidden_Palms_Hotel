@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Frontend\PagesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,8 +15,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware(['visitor'])->group(function () {
-
-    Route::get('/', function () {
-        return view('welcome');
+    Route::controller(PagesController::class)->group(function () {
+        Route::get('/', 'index')->name('home.page');
+        Route::get('/about', 'about')->name('about.page');
+        Route::get('/rooms', 'rooms')->name('rooms.page');
+        Route::get('/gallery', 'gallery')->name('gallery.page');
+        Route::get('/events', 'events')->name('events.page');
+        Route::get('/contact', 'contact')->name('contact.page');
     });
 });
