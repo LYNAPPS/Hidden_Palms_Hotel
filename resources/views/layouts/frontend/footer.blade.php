@@ -12,20 +12,23 @@
                         <ul class="personal-info">
                             <li>
                                 <i class="fa fa-map-marker"></i>
-                                Address: 44 New Design Street,
+                                Address: {{ $contact->address }}
                             </li>
                             <li>
                                 <i class="fa fa-envelope"></i>
-                                Email:<a href="mailto:sales@hotelempire.com">info@themevessel.com</a>
+                                Email:
+                                @foreach ($contact->emails as $email)
+                                    <a href="mailto:sales@hotelempire.com">{{ $email->email }}</a>
+                                @endforeach
                             </li>
                             <li>
                                 <i class="fa fa-phone"></i>
-                                Phone: <a href="tel:+55-417-634-7071">+0477 85X6 552</a>
+                                Phone: <br>
+                                @foreach ($contact->phones as $phone)
+                                    <a href="tel:{{ $phone->phone }}">{{ $phone->phone }}</a><br>
+                                @endforeach
                             </li>
-                            <li>
-                                <i class="fa fa-fax"></i>
-                                Fax: +0477 85X6 552
-                            </li>
+
                         </ul>
                     </div>
                 </div>
@@ -36,20 +39,13 @@
                         </div>
                         <ul class="links">
                             <li>
-                                <a href="rooms-col-3.html">Rooms & Suites</a>
+                                <a href="{{ route('rooms.page') }}">Rooms & Suites</a>
                             </li>
-                            <li>
-                                <a href="rooms-details.html">Restaurant</a>
-                            </li>
-                            <li>
-                                <a href="rooms-col-2.html">Hotel</a>
-                            </li>
+
                             <li>
                                 <a href="#">Our Facilties</a>
                             </li>
-                            <li>
-                                <a href="rooms-col-3.html">Rooms</a>
-                            </li>
+
                         </ul>
                     </div>
                 </div>
@@ -60,19 +56,17 @@
                         </div>
                         <ul class="links">
                             <li>
-                                <a href="about.html">About Us</a>
+                                <a href="{{ route('about.page') }}">About Us</a>
                             </li>
                             <li>
-                                <a href="blog-right-sidebar.html">Blog & Events</a>
+                                <a href="{{ route('events.page') }}">Blog & Events</a>
+                            </li>
+
+                            <li>
+                                <a href="{{ route('gallery.page') }}">Gallery</a>
                             </li>
                             <li>
-                                <a href="booking-system.html">Booking</a>
-                            </li>
-                            <li>
-                                <a href="gallery-3column.html">Gallery</a>
-                            </li>
-                            <li>
-                                <a href="contact.html">Contact Us</a>
+                                <a href="{{ route('contact.page') }}">Contact Us</a>
                             </li>
                         </ul>
                     </div>
@@ -81,6 +75,7 @@
                     <div class="footer-item newsletter">
                         <div class="main-title-2">
                             <h1>Newsletter</h1>
+                            x
                         </div>
                         <div class="newsletter-inner">
                             <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
@@ -99,11 +94,14 @@
     <div class="copy-right">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-6">
-                    <p> &copy; 2021 <a href="http://themevessel.com/" target="_blank">Theme Vessel</a>. All Rights
-                        Reserved.</p>
+                <div class="col-lg-12 col-md-12">
+                    <p> &copy; @php echo date('Y') @endphp Hidden Palms Hotel
+                        All Rights
+                        Reserved. Developed By: <a href="http://techmaxsolutionsgh.com/" target="_blank">BitByte
+                            Tech
+                            Solutions</a></p>
                 </div>
-                <div class="col-lg-6 col-md-6">
+                {{-- <div class="col-lg-6 col-md-6">
                     <div class="clearfix"></div>
                     <ul class="social-list">
                         <li><a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
@@ -112,7 +110,7 @@
                         <li><a href="#" class="google-bg"><i class="fa fa-google-plus"></i></a></li>
                         <li><a href="#" class="linkedin-bg"><i class="fa fa-linkedin"></i></a></li>
                     </ul>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>

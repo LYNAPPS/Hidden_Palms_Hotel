@@ -5,7 +5,9 @@
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item item active">
-                    <img class="d-block w-100 h-100" src="{{ url('asset/img/banner/img-3.jpg') }}" alt="banner">
+                    <img class="d-block w-100 h-100"
+                        src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/468532219.jpg?k=17f7787d0280f6d3042fd96bee01f5ee8d125104803e3bc2f9c7ca9d38c01977&o=&hp=1"
+                        alt="banner">
                     <div class="carousel-caption banner-slider-inner d-flex h-100">
                         <div class="carousel-content container align-self-center">
                             <div class="row bti-section">
@@ -79,42 +81,34 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-12 wow fadeInLeft delay-04s">
-                    <div class="about-img-section">
-                        <div class="image-box">
-                            <div class="image-1"><img src="img/about/img-4.jpg" class="rounded" alt="photo"></div>
-                            <div class="image-2"><img src="img/about/img-5.jpg" class="rounded" alt="photo"></div>
-                        </div>
-                        <div class="about-box-Experience">
-                            <h3 class="text-white">38</h3>
-                            <p class="mb-0 text-white">Years of Experience</p>
-                        </div>
+                    <div class="about-text clearfix">
+                        <!-- title -->
+                        <h5>Hotel <span>About</span></h5>
+                        <h1>Welcome To <span style="color: #2adc71;">{{ $contact->name }}</span></h1>
+                        <!-- paragraph -->
+                        <p>{!! \Illuminate\Support\Str::limit($siteInfo->about_us, 700) !!}</p>
+
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12 wow fadeInRight delay-04s align-self-center">
                     <div class="about-content-section">
-                        <h5>Hotel <span>Bayview</span></h5>
-                        <h1>Welcome To Hotel Alpha</h1>
+
                         <ul class="network-list mb-40">
                             <li>
-                                <i class="icon fa fa-building-o"></i>
-                                <h4>Compact and Comfortable Rooms</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed magna aliqua.eius to mod
-                                    incididunt</p>
+                                <i class="icon fa fa-bullseye"></i>
+                                <h4>Mission</h4>
+                                <p>{{ $siteInfo->mission_statement }}</p>
+
                             </li>
+
                             <li>
-                                <i class="icon flaticon-room-service"></i>
-                                <h4>Friendly Fair Prices and Service</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed magna aliqua.eius to mod
-                                    incididunt</p>
+                                <i class="icon fa fa-binoculars"></i>
+                                <h4>Vision</h4>
+                                <p>{{ $siteInfo->vision }}</p>
                             </li>
-                            <li>
-                                <i class="icon flaticon-school-call-phone-reception"></i>
-                                <h4>Public Safety and 24/7 Security</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed magna aliqua.eius to mod
-                                    incididunt</p>
-                            </li>
+
                         </ul>
-                        <a class="btn-lg btn-5" href="#"><span>Explore More</span></a>
+                        <a class="btn-lg btn-5" href="{{ route('about.page') }}"><span>Read More</span></a>
                     </div>
                 </div>
             </div>
@@ -199,284 +193,118 @@
     </div>
     <!-- Hotel section end -->
 
-    <!-- Our facilties section start -->
-    <div class="our-facilties-section content-area-5">
-        <div class="overlay">
-            <div class="container">
-                <!-- Main title -->
-                <div class="main-title">
-                    <h1>Our Facilties</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInLeft delay-04s">
-                        <div class="services-box-2 d-flex">
-                            <div class="icon">
-                                <i class="flaticon-school-call-phone-reception"></i>
-                            </div>
-                            <div class="contant">
-                                <h3><a href="#">24-hour Reception</a></h3>
-                                <p>Lorem ipsum dolor sit amet, conser adipisicing elit. Numquam deleniti amet quia voluptate
-                                    laboriosam</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp delay-04s">
-                        <div class="services-box-2 d-flex">
-                            <div class="icon">
-                                <i class="flaticon-room-service"></i>
-                            </div>
-                            <div class="contant">
-                                <h3><a href="#">Room Service</a></h3>
-                                <p>Lorem ipsum dolor sit amet, conser adipisicing elit. Numquam deleniti amet quia voluptate
-                                    laboriosam</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInRight delay-04s">
-                        <div class="services-box-2 d-flex">
-                            <div class="icon">
-                                <i class="flaticon-graph-line-screen"></i>
-                            </div>
-                            <div class="contant">
-                                <h3><a href="#">Flat Screen TV</a></h3>
-                                <p>Lorem ipsum dolor sit amet, conser adipisicing elit. Numquam deleniti amet quia voluptate
-                                    laboriosam</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInLeft delay-04s">
-                        <div class="services-box-2 d-flex">
-                            <div class="icon">
-                                <i class="flaticon-weightlifting"></i>
-                            </div>
-                            <div class="contant">
-                                <h3><a href="#">Gym</a></h3>
-                                <p>Lorem ipsum dolor sit amet, conser adipisicing elit. Numquam deleniti amet quia voluptate
-                                    laboriosam</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp delay-04s">
-                        <div class="services-box-2 d-flex">
-                            <div class="icon">
-                                <i class="flaticon-parking"></i>
-                            </div>
-                            <div class="contant">
-                                <h3><a href="#">Free Parking</a></h3>
-                                <p>Lorem ipsum dolor sit amet, conser adipisicing elit. Numquam deleniti amet quia voluptate
-                                    laboriosam</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInRight delay-04s">
-                        <div class="services-box-2 d-flex">
-                            <div class="icon">
-                                <i class="flaticon-wifi-connection-signal-symbol"></i>
-                            </div>
-                            <div class="contant">
-                                <h3><a href="#">Free Wi-Fi</a></h3>
-                                <p>Lorem ipsum dolor sit amet, conser adipisicing elit. Numquam deleniti amet quia voluptate
-                                    laboriosam</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- Our facilties section 2 start -->
+    <div class="our-facilties-section-2">
+        <div class="container">
+            <div class="main-title">
+                <h1>Our Facilities</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
             </div>
+            @if ($facilities->isEmpty())
+                <p>No blog posts available.</p>
+            @else
+                <div class="row">
+                    @foreach ($facilities as $index => $facilty)
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="services-box">
+                                <div class="number">{{ $index + 1 }}</div>
+                                <div class="detail" style="width: 100%; margin-left: 0;">
+                                    <h3>
+                                        <a href="#">{{ $facilty->name }}</a>
+                                    </h3>
+                                    <p>
+                                        {!! \Illuminate\Support\Str::limit($facilty->description, 100, $end = '...') !!}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            @endif
+
         </div>
     </div>
-    <!-- Our facilties section end -->
+    <!-- Our facilties section 2 end -->
+
 
 
     <!-- Blog section start -->
-    <div class="blog-section content-area comon-slick">
+    <div class="blog-section content-area comon-slick bg-white">
         <div class="container">
             <!-- Main title -->
             <div class="main-title">
                 <h1>Our Blog</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
             </div>
-            <div class="slick row comon-slick-inner wow fadeInUp delay-04s"
-                data-slick='{"slidesToShow": 3, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
-                <div class="item slide-box">
-                    <div class="blog-1">
-                        <div class="blog-image">
-                            <img src="img/blog/img-5.jpg" alt="image" class="img-fluid w-100">
-                            <div class="profile-user">
-                                <img src="img/avatar/avatar-1.jpg" alt="user">
-                            </div>
-                            <div class="date-box">
-                                <span>09</span>Sep
+            @if ($blogs->isEmpty())
+                <p>No blog posts available.</p>
+            @else
+                <div class="slick row comon-slick-inner wow fadeInUp delay-04s"
+                    data-slick='{"slidesToShow": 3, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
+
+                    @foreach ($blogs as $blog)
+                        <div class="item slide-box">
+                            <div class="blog-1">
+                                <div class="blog-image">
+                                    @if ($blog->image_url)
+                                        <div class="image-container">
+                                            <img src="{{ url('storage', $blog->image_url) }}" alt="image"
+                                                class="img-fluid w-100">
+                                        </div>
+                                    @endif
+
+                                    <div class="date-box">
+                                        <span>{{ $blog->created_at->format('d') }}</span>{{ $blog->created_at->format('M') }}
+                                    </div>
+                                </div>
+                                <div class="detail">
+                                    <div class="post-meta clearfix">
+                                        <ul>
+                                            <li>
+                                                <strong><a href="#">{{ $blog->author->name }}</a></strong>
+                                            </li>
+                                            <li class="float-right mr-0"><a href="#"><i
+                                                        class="fa fa-eye"></i></a>{{ $blog->view_count }}</li>
+
+                                        </ul>
+                                    </div>
+                                    <h3>
+                                        <a href="blog-details.html">{{ $blog->title }}</a>
+                                    </h3>
+                                    <p>
+                                        {!! \Illuminate\Support\Str::limit($blog->content, 150, $end = '...') !!}</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="detail">
-                            <div class="post-meta clearfix">
-                                <ul>
-                                    <li>
-                                        <strong><a href="#">By: Auro Navanth</a></strong>
-                                    </li>
-                                    <li class="float-right mr-0"><a href="#"><i
-                                                class="fa fa-commenting-o"></i></a>205</li>
-                                    <li class="float-right"><a href="#"><i class="fa fa-calendar"></i></a>328</li>
-                                </ul>
-                            </div>
-                            <h3>
-                                <a href="blog-details.html">Standard Post Format Title</a>
-                            </h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                                been the industry's</p>
-                        </div>
-                    </div>
+                    @endforeach
+
+
+
                 </div>
-                <div class="item slide-box">
-                    <div class="blog-1">
-                        <div class="blog-image">
-                            <img src="img/blog/img-4.jpg" alt="image" class="img-fluid w-100">
-                            <div class="profile-user">
-                                <img src="img/avatar/avatar-2.jpg" alt="user">
-                            </div>
-                            <div class="date-box">
-                                <span>06</span>Sep
-                            </div>
-                        </div>
-                        <div class="detail">
-                            <div class="post-meta clearfix">
-                                <ul>
-                                    <li>
-                                        <strong><a href="#">By: Navanth Auro</a></strong>
-                                    </li>
-                                    <li class="float-right mr-0"><a href="#"><i
-                                                class="fa fa-commenting-o"></i></a>205</li>
-                                    <li class="float-right"><a href="#"><i class="fa fa-calendar"></i></a>328</li>
-                                </ul>
-                            </div>
-                            <h3>
-                                <a href="blog-details.html">Alpha Hotel Pars Studiorum</a>
-                            </h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                                been the industry's</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item slide-box">
-                    <div class="blog-1">
-                        <div class="blog-image">
-                            <img src="img/blog/img-5.jpg" alt="image" class="img-fluid w-100">
-                            <div class="profile-user">
-                                <img src="img/avatar/avatar-3.jpg" alt="user">
-                            </div>
-                            <div class="date-box">
-                                <span>14</span>Sep
-                            </div>
-                        </div>
-                        <div class="detail">
-                            <div class="post-meta clearfix">
-                                <ul>
-                                    <li>
-                                        <strong><a href="#">By: Tanzim</a></strong>
-                                    </li>
-                                    <li class="float-right mr-0"><a href="#"><i
-                                                class="fa fa-commenting-o"></i></a>205</li>
-                                    <li class="float-right"><a href="#"><i class="fa fa-calendar"></i></a>328</li>
-                                </ul>
-                            </div>
-                            <h3>
-                                <a href="blog-details.html">Best Night Photo at Alpha Hotel </a>
-                            </h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                                been the industry's</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item slide-box">
-                    <div class="blog-1">
-                        <div class="blog-image">
-                            <img src="img/blog/img-6.jpg" alt="image" class="img-fluid w-100">
-                            <div class="profile-user">
-                                <img src="img/avatar/avatar-3.jpg" alt="user">
-                            </div>
-                            <div class="date-box">
-                                <span>14</span>Sep
-                            </div>
-                        </div>
-                        <div class="detail">
-                            <div class="post-meta clearfix">
-                                <ul>
-                                    <li>
-                                        <strong><a href="#">By: Tanzim</a></strong>
-                                    </li>
-                                    <li class="float-right mr-0"><a href="#"><i
-                                                class="fa fa-commenting-o"></i></a>205</li>
-                                    <li class="float-right"><a href="#"><i class="fa fa-calendar"></i></a>328</li>
-                                </ul>
-                            </div>
-                            <h3>
-                                <a href="blog-details.html">Best Night Photo at Alpha Hotel </a>
-                            </h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                                been the industry's</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endif
         </div>
     </div>
     <!-- Blog section end -->
-
-    <!-- Partners 2 start -->
-    <div class="partners-2 comon-slick">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-md-12">
-                    <div class="left-info">
-                        <h2>Our Partners</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    </div>
-                </div>
-                <div class="col-lg-7 col-md-12">
-                    <div class="partners-inner">
-                        <div class="slick row comon-slick-inner"
-                            data-slick='{"slidesToShow": 3, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 2}}]}'>
-                            <div class="item slide-box">
-                                <div class="partners-box">
-                                    <img src="img/brand/brand-1.png" alt="brand" class="img-fluid">
-                                </div>
-                            </div>
-                            <div class="item slide-box">
-                                <div class="partners-box">
-                                    <img src="img/brand/brand-2.png" alt="brand" class="img-fluid">
-                                </div>
-                            </div>
-                            <div class="item slide-box">
-                                <div class="partners-box">
-                                    <img src="img/brand/brand-3.png" alt="brand" class="img-fluid">
-                                </div>
-                            </div>
-                            <div class="item slide-box">
-                                <div class="partners-box">
-                                    <img src="img/brand/brand-4.png" alt="brand" class="img-fluid">
-                                </div>
-                            </div>
-                            <div class="item slide-box">
-                                <div class="partners-box">
-                                    <img src="img/brand/brand-5.png" alt="brand" class="img-fluid">
-                                </div>
-                            </div>
-                            <div class="item slide-box">
-                                <div class="partners-box">
-                                    <img src="img/brand/brand-6.png" alt="brand" class="img-fluid">
-                                </div>
-                            </div>
-                            <div class="item slide-box">
-                                <div class="partners-box">
-                                    <img src="img/brand/brand-4.png" alt="brand" class="img-fluid">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Partners 2 end -->
 @endsection
+
+<style>
+    .image-container {
+        position: relative;
+        width: 100%;
+        padding-top: 70%;
+        /* 4:3 aspect ratio (can adjust as needed) */
+        overflow: hidden;
+    }
+
+    .image-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* Ensures the image covers the container */
+        object-position: center;
+        /* Centers the image within the container */
+    }
+</style>
