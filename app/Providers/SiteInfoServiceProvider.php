@@ -22,17 +22,17 @@ class SiteInfoServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // $siteInfo = SiteInfo::first();
-        // $contact = Contact::with(
-        //     'phones',
-        //     'emails'
-        // )->first();
-        // $siteInfo = SiteInfo::first();
-        // $contact = Contact::with(
-        //     'phones',
-        //     'emails'
-        // )->first();
-        // View::share('siteInfo', $siteInfo);
-        // View::share('contact', $contact);
+        $siteInfo = SiteInfo::first();
+        $contact = Contact::with(
+            'phones',
+            'emails'
+        )->first();
+        $siteInfo = SiteInfo::first();
+        $contact = Contact::with(
+            'phones',
+            'emails'
+        )->first();
+        View::share('siteInfo', $siteInfo);
+        View::share('contact', $contact);
     }
 }
