@@ -68,6 +68,7 @@ class BlogPostResource extends Resource
                     ->description('Upload an image for your post.')
                     ->schema([
                         Forms\Components\FileUpload::make('image_url')
+                            ->disk('blog_images')
                             ->label('Post Image')
                             ->image(),
                     ]),

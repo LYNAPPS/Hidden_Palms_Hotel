@@ -21,5 +21,27 @@
     @include('layouts.frontend.footer')
     @include('layouts.frontend.scripts')
 </body>
+<style>
+    .image-container {
+        position: relative;
+        width: 100%;
+        padding-top: 70%;
+        /* 4:3 aspect ratio (can adjust as needed) */
+        overflow: hidden;
+    }
+
+    .image-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* Ensures the image covers the container */
+        object-position: center;
+        /* Centers the image within the container */
+    }
+</style>
+
 
 </html>

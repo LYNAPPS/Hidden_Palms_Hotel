@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\BlogPost;
 use App\Models\Facility;
+use App\Models\RoomType;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -13,7 +14,8 @@ class PagesController extends Controller
     {
         $blogs = BlogPost::where('status', 'published')->take(3)->get();
         $facilities = Facility::all();
-        return view('welcome', compact('blogs', 'facilities'));
+        $rooms = RoomType::all();
+        return view('welcome', compact('blogs', 'facilities', 'rooms'));
     }
 
     public function about()
@@ -22,7 +24,9 @@ class PagesController extends Controller
     }
     public function rooms()
     {
-        return view('rooms.index');
+        $rooms = RoomType::all();
+
+        return view('rooms.index', compact('rooms'));
     }
     public function gallery()
     {

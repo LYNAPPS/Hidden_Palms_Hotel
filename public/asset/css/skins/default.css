@@ -49,8 +49,8 @@
 }
 
 .pagination .page-item a:hover {
-    background: #fba466;
-    border-color: #fba466;
+    background: #2adc71;
+    border-color: #2adc71;
 }
 
 .archives ul li a:hover {
@@ -134,7 +134,7 @@
 }
 
 .about-hotel-alpha-3 .carousel-indicators .active {
-    background: rgb(244, 164, 96);
+    background: #2adc71;
 }
 
 .about-content-section .network-list li .icon {
@@ -274,12 +274,12 @@
 }
 
 .events-box-3:hover .bordered-btn{
-    border: solid 2px #fba466;
-    background: #fba466;
+    border: solid 2px #2adc71;
+    background: #2adc71;
 }
 
 .events-box-3 .meta .category {
-    background: #fba466;
+    background: #2adc71;
 }
 
 .events-box-3:hover .event-thumb{
@@ -299,7 +299,7 @@
 }
 
 .blog-4:hover .post-date{
-    background: #fba466;
+    background: #2adc71;
     color: #fff;
 }
 
@@ -333,7 +333,7 @@
 }
 
 .btn-4:after {
-    background: #e49755;
+    background: #2adc71;
 }
 
 #banner-3 h3 span {
@@ -357,8 +357,8 @@
 }
 
 .our-facilties-section-3 .our-facilties-2 ul li i {
-    border: solid 2px #fba466;
-    background: #fba466;
+    border: solid 2px #2adc71;
+    background: #2adc71;
 }
 
 .events-box-2 .content .date-author {
@@ -435,8 +435,8 @@
 }
 
 .pagination .page-item .active {
-    background: #fba466;
-    border-color: #fba466;
+    background: #2adc71;
+    border-color: #2adc71;
     color: #fff;
 }
 
@@ -607,7 +607,7 @@
 }
 
 #main-header-4 .contact-now .left{
-    background-color: #e49755;
+    background-color: #2adc71;
 }
 
 

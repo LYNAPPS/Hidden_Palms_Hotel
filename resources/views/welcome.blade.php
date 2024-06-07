@@ -125,69 +125,57 @@
                     <h1>Our Best Rooms</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
                 </div>
-                <div class="row wow fadeInUp delay-04s">
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="hotel-box">
-                            <!-- Photo thumbnail -->
-                            <div class="photo-thumbnail">
-                                <div class="photo">
-                                    <img src="img/room/img-1.jpg" alt="photo" class="img-fluid w-100">
-                                    <a href="rooms-details.html">
-                                        <span class="blog-one__plus"></span>
-                                    </a>
-                                </div>
-                                <div class="pr">
-                                    <div class="rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-half-full"></i>
-                                    </div>
-                                    $567.99/Night
-                                </div>
-                            </div>
-                            <!-- Detail -->
-                            <div class="detail clearfix">
-                                <h3>
-                                    <a href="rooms-details.html">Luxury Room</a>
-                                </h3>
-                                <p class="location">
-                                    <a href="rooms-details.html">
-                                        <i class="fa fa-map-marker"></i>123 Kathal St. Tampa City,
-                                    </a>
-                                </p>
-                                <div class="fecilities">
-                                    <ul>
-                                        <li>
-                                            <i class="flaticon-bed"></i> Beds
-                                        </li>
-                                        <li>
-                                            <i class="flaticon-air-conditioning"></i>
-                                            AC
-                                        </li>
-                                        <li>
-                                            <i class="flaticon-graph-line-screen"></i>
-                                            TV
-                                        </li>
-                                        <li>
-                                            <i class="flaticon-weightlifting"></i>
-                                            GYM
-                                        </li>
-                                        <li>
-                                            <i class="flaticon-wifi-connection-signal-symbol"></i>
-                                            Wi-fi
-                                        </li>
-                                        <li>
-                                            <i class="flaticon-parking"></i>
-                                            Parking
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                @if ($rooms->isEmpty())
+                    <div class="alert alert-warning" role="alert">
+                        Currently, there are no rooms available. Please check back later.
                     </div>
-                </div>
+                @else
+                    <div class="row wow fadeInUp delay-04s">
+                        @foreach ($rooms as $index => $room)
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="hotel-box">
+                                    <!-- Photo thumbnail -->
+                                    <div class="photo-thumbnail">
+                                        <div class="photo">
+                                            <div class="image-container">
+                                                <img src="{{ Storage::disk('room_images')->url($room->main_image) }}"
+                                                    alt="image" class="img-fluid w-100">
+                                            </div>
+                                            <a href="rooms-details.html">
+                                                <span class="blog-one__plus"></span>
+                                            </a>
+                                        </div>
+                                        <div class="pr">
+                                            <div class="rating">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star-half-full"></i>
+                                            </div>
+                                            GHC {{ $room->price }}/Night
+                                        </div>
+                                    </div>
+                                    <!-- Detail -->
+                                    <div class="detail clearfix">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h3 class="mb-0">
+                                                <a href="rooms-details.html">{{ $room->name }}</a>
+                                            </h3>
+                                            <p class="mb-0" style="color: #2adc71;">
+                                                GHC {{ $room->price }}/Night
+                                            </p>
+                                        </div>
+
+                                        {{-- <p class="location">
+                                            {!! \Illuminate\Support\Str::limit($room->description, 60, $end = '...') !!}
+                                        </p> --}}
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                @endif
             </div>
         </div>
     </div>
@@ -248,8 +236,8 @@
                                 <div class="blog-image">
                                     @if ($blog->image_url)
                                         <div class="image-container">
-                                            <img src="{{ url('storage', $blog->image_url) }}" alt="image"
-                                                class="img-fluid w-100">
+                                            <img src="{{ Storage::disk('blog_images')->url($blog->image_url) }}"
+                                                alt="image" class="img-fluid w-100">
                                         </div>
                                     @endif
 
@@ -286,25 +274,3 @@
     </div>
     <!-- Blog section end -->
 @endsection
-
-<style>
-    .image-container {
-        position: relative;
-        width: 100%;
-        padding-top: 70%;
-        /* 4:3 aspect ratio (can adjust as needed) */
-        overflow: hidden;
-    }
-
-    .image-container img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        /* Ensures the image covers the container */
-        object-position: center;
-        /* Centers the image within the container */
-    }
-</style>

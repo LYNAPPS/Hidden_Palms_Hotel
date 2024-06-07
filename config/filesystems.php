@@ -45,8 +45,15 @@ return [
         ],
         'room_images' => [
             'driver' => 'local',
-            'root' => storage_path('app/room_images'),
+            'root' => storage_path('app/public/room_images'),
             'url' => env('APP_URL') . '/storage/room_images',
+            'visibility' => 'public',
+        ],
+
+        'blog_images' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/blog_images'),
+            'url' => env('APP_URL') . '/storage/blog_images',
             'visibility' => 'public',
         ],
 

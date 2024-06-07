@@ -9,9 +9,11 @@ use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Facades\Storage;
 
 class RoomTypeResource extends Resource
 {
@@ -33,7 +35,9 @@ class RoomTypeResource extends Resource
                     ->numeric()
                     ->prefix('$'),
                 Forms\Components\FileUpload::make('main_image')
-                    ->image(),
+                    ->disk('room_images')
+                    ->image()
+                    ->nullable(),
             ]);
     }
 
@@ -46,7 +50,11 @@ class RoomTypeResource extends Resource
                 Tables\Columns\TextColumn::make('price')
                     ->money()
                     ->sortable(),
-                Tables\Columns\ImageColumn::make('main_image'),
+                // Tables\Columns\ImageColumn::make('main_image'),
+                ImageColumn::make('main_image')
+                    ->label('Main Image')
+                    ->disk('room_images')
+                    ->url(fn ($record) => Storage::disk('room_images')->url($record->main_image)),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
