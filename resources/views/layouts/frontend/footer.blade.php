@@ -77,8 +77,9 @@
                             <h1>Newsletter</h1>
                         </div>
                         <div class="newsletter-inner">
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                                anim id est laborum.</p>
+                            <p>Subscribe to our newsletter to receive the latest updates, special offers, and insightful
+                                articles directly in your inbox.</p>
+
                             <form class="form-inline" action="#" method="GET">
                                 <input type="text" class="form-control" id="inlineFormInputName4"
                                     placeholder="Your Email">

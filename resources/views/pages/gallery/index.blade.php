@@ -22,8 +22,10 @@
             <!-- Main title -->
             <div class="main-title">
                 <h1>Our Gallery</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+                <p>Take a visual tour of our stunning facilities, beautiful rooms, and memorable events through our gallery.
+                </p>
             </div>
+
 
             <div class="row filter-portfolio">
                 <div class="col-lg-4 col-md-6 col-sm-12 filtr-item" data-category="3">

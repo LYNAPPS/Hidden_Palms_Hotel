@@ -123,8 +123,10 @@
                 <!-- Main title -->
                 <div class="main-title">
                     <h1>Our Best Rooms</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+                    <p>Explore our luxurious rooms, each designed with comfort and style in mind. Experience the best we
+                        have to offer.</p>
                 </div>
+
                 @if ($rooms->isEmpty())
                     <div class="alert alert-warning" role="alert">
                         Currently, there are no rooms available. Please check back later.
@@ -186,10 +188,13 @@
         <div class="container">
             <div class="main-title">
                 <h1>Our Facilities</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+                <p>Discover the range of facilities we offer, designed to provide you with comfort and convenience during
+                    your stay.</p>
             </div>
+
             @if ($facilities->isEmpty())
-                <p>No blog posts available.</p>
+                <div class="alert alert-warning" role="alert">
+                    No blog posts available.</div>
             @else
                 <div class="row">
                     @foreach ($facilities as $index => $facilty)
@@ -222,10 +227,14 @@
             <!-- Main title -->
             <div class="main-title">
                 <h1>Our Blog</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+                <p>Stay updated with the latest news, tips, and stories from our team. Explore our blog for valuable
+                    insights and inspiration.</p>
             </div>
+
             @if ($blogs->isEmpty())
-                <p>No blog posts available.</p>
+                <div class="alert alert-warning" role="alert">
+                    No blog posts available.
+                </div>
             @else
                 <div class="slick row comon-slick-inner wow fadeInUp delay-04s"
                     data-slick='{"slidesToShow": 3, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>

@@ -65,7 +65,8 @@
         <div class="container">
             <div class="main-title">
                 <h1>Our Facilities</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+                <p>Discover the range of facilities we offer, designed to provide you with comfort and convenience during
+                    your stay.</p>
             </div>
             @if ($facilities->isEmpty())
                 <p>No blog posts available.</p>

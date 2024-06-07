@@ -23,7 +23,8 @@
                 <!-- Main title -->
                 <div class="main-title">
                     <h1>Our Best Rooms</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+                    <p>Explore our luxurious rooms, each designed with comfort and style in mind. Experience the best we
+                        have to offer.</p>
                 </div>
                 @if ($rooms->isEmpty())
                     <div class="alert alert-warning" role="alert">
