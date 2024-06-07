@@ -257,7 +257,7 @@
                                         </ul>
                                     </div>
                                     <h3>
-                                        <a href="blog-details.html">{{ $blog->title }}</a>
+                                        <a href="{{ route('read_blog', $blog->slug) }}">{{ $blog->title }}</a>
                                     </h3>
                                     <p>
                                         {!! \Illuminate\Support\Str::limit($blog->content, 150, $end = '...') !!}</p>

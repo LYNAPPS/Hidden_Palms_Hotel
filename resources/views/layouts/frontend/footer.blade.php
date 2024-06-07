@@ -75,7 +75,6 @@
                     <div class="footer-item newsletter">
                         <div class="main-title-2">
                             <h1>Newsletter</h1>
-                            x
                         </div>
                         <div class="newsletter-inner">
                             <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit

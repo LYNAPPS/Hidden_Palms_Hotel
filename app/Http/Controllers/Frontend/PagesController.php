@@ -20,7 +20,8 @@ class PagesController extends Controller
 
     public function about()
     {
-        return view('pages.about.index');
+        $facilities = Facility::all();
+        return view('pages.about.index', compact('facilities'));
     }
     public function rooms()
     {
