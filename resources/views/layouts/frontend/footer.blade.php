@@ -18,7 +18,7 @@
                                 <i class="fa fa-envelope"></i>
                                 Email:
                                 @foreach ($contact->emails as $email)
-                                    <a href="mailto:sales@hotelempire.com">{{ $email->email }}</a>
+                                    <a href="mailto:{{ $email->email }}">{{ $email->email }}</a>
                                 @endforeach
                             </li>
                             <li>

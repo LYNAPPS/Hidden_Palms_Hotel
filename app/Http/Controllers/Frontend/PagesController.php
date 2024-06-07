@@ -20,24 +20,24 @@ class PagesController extends Controller
 
     public function about()
     {
-        return view('about.index');
+        return view('pages.about.index');
     }
     public function rooms()
     {
         $rooms = RoomType::all();
 
-        return view('rooms.index', compact('rooms'));
+        return view('pages.rooms.index', compact('rooms'));
     }
     public function gallery()
     {
-        return view('gallery.index');
+        return view('pages.gallery.index');
     }
     public function events()
     {
-        return view('events.index');
+        return view('pages.events.index');
     }
     public function contact()
     {
-        return view('contact.index');
+        return view('pages.contact.index');
     }
 }

@@ -8,7 +8,7 @@
             </div>
             <nav class="breadcrumbs">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('home.page') }}">Home</a></li>
                     <li class="breadcrumb-item active">Rooms</li>
                 </ol>
             </nav>

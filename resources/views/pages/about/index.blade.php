@@ -4,12 +4,12 @@
     <div class="sub-banner">
         <div class="container">
             <div class="breadcrumb-area">
-                <h1>Contact Us</h1>
+                <h1>About Us</h1>
             </div>
             <nav class="breadcrumbs">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item active">Contact Us</li>
+                    <li class="breadcrumb-item"><a href="{{ route('home.page') }}">Home</a></li>
+                    <li class="breadcrumb-item active">About Us</li>
                 </ol>
             </nav>
         </div>
